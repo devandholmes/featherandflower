@@ -8,4 +8,5 @@ export interface IProduct {
     category: string;
     quantity: number;
     isFeatured?: boolean;
+    isSoldOut?: boolean;
 }

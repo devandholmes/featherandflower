@@ -25,7 +25,7 @@ const Carousel: React.FC<CarouselProps> = ({ items }) => {
                         style={{ transform: `rotateY(${index * 40}deg) translateZ(300px)` }}
                         key={index}
                     >
-                        <FlipCard cardImage={item.cardImage} description={item.description} productImage={item.productImage} title={item.title} key={item.index} />
+                        <FlipCard cardImage={item.cardImage} description={item.description} backImage={item.productImage} frontImage={item.productImage} title={item.title} key={item.index} />
                     </div>
                 ))}
             </div>

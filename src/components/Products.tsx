@@ -129,7 +129,7 @@ const Products = () => {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" onClick={() => handleAddToCart(product)}>
+                    <Button size="small" onClick={() => handleAddToCart(product)} disabled={product.isSoldOut}>
                       Add to Cart
                     </Button>
                   </CardActions>

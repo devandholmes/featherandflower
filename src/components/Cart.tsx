@@ -71,8 +71,8 @@ const Cart = () => {
       const deliveryCost:number = deliveryOptions.find(option => option.value === deliveryType)?.cost || 0;
       const totalWithDelivery = total + deliveryCost;
 
-      const pfUrl = devPayFastUrl + new URLSearchParams({
-        merchant_id: merchantId,
+      const pfUrl = livePayFastUrl + new URLSearchParams({
+        receiver: merchantId,
         merchant_key: merchantKey,
         amount: totalWithDelivery.toFixed(2),
         item_name: itemNames,
@@ -83,7 +83,9 @@ const Cart = () => {
         cell_number: userMobileNumber,
         payment_method: paymentMethod,
         cancel_url: cancelUrl,
-        payment_id: generateGUID(),
+        cmd: '_paynow',
+        m_payment_id: generateGUID(),
+        email_confirmation: '1',
       });
       window.open(pfUrl, '_blank');
     }

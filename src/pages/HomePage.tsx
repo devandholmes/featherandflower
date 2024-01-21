@@ -11,7 +11,7 @@ const HomePage = () => {
             backgroundColor: '#1a3842 ',
             height: '100vh',
         }}>
-            <ProductCategories />
+            <ProductCategories products={[]} />
         </div>
     );
 };

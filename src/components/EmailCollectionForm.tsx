@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { Button, TextField, Typography } from '@mui/material';
-import { collection, addDoc } from 'firebase/firestore';
+import firebase from 'firebase/app';
+import 'firebase/firestore';
+
+// Then use them like this:
+
 import { db } from '../firebase'; // Make sure to export 'db' from your firebase.ts file
 
 const EmailCollectionForm: React.FC = () => {
@@ -10,7 +14,7 @@ const EmailCollectionForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const docRef = await addDoc(collection(db, 'emails'), {
+      const docRef = await firebase.firestore().collection('emails').add({
         email,
       });
       console.log('Document written with ID: ', docRef.id);
