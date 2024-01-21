@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch } from '../../redux/store'; // Adjust the path as needed
 import { login } from '../../redux/authSlice';
 import { RootState } from '../../redux/store';
-import { Button, Card, CardActionArea, CardContent, CardHeader, Input, TextField } from '@mui/material';
+import { Button, Card, CardActionArea, CardContent, CardHeader, TextField } from '@mui/material';
 
 const Login: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();

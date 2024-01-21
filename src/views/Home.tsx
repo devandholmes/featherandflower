@@ -4,7 +4,7 @@ import 'firebase/firestore';
 import ProductCategories from '../components/ProductCategories';
 import { fetchProductCategoryStart, fetchProductCategorySuccess } from '../redux/productCategoriesSlice';
 import { fetchAllProductCategories } from '../firebaseFunctions/productCategoryFunctions';
-import { Box, Card, CardContent, CardHeader, Typography } from '@mui/material';
+import { Card, CardContent, CardHeader } from '@mui/material';
 import { fetchAllProducts } from '../firebaseFunctions/productFunctions';
 import { fetchProductsSuccess } from '../redux/productSlice';
 

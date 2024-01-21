@@ -12,7 +12,7 @@ import Products from './components/Products';
 import PurchaseComplete from './components/PurchaseComplete';
 import { Alert, Snackbar } from '@mui/material';
 import { closeSnack } from './redux/snackSlice'; // import the closeSnack action
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 
 
 

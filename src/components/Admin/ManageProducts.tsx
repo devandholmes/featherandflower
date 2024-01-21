@@ -1,14 +1,13 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { db } from "../../firebase";
-import { fetchProductsStart, fetchProductsSuccess, fetchProductsFailure } from "../../redux/productSlice";
-import { Autocomplete, Button, Card, CardActions, CardContent, CardHeader, Dialog, IconButton, List, ListItem, ListItemIcon, ListItemText, Menu, MenuItem, MenuList, Table, TableBody, TableCell, TableHead, TableRow, TextField, Tooltip } from "@mui/material";
+import { fetchProductsStart, fetchProductsSuccess } from "../../redux/productSlice";
+import { Autocomplete, Button, Card, CardActions, CardContent, CardHeader, Dialog, IconButton, List, ListItem, ListItemIcon, Menu, MenuItem, Table, TableBody, TableCell, TableHead, TableRow, TextField, Tooltip } from "@mui/material";
 import { IProduct } from "../../types/IProduct";
 import { mdiDelete, mdiPencil, mdiPlus, mdiClose, mdiDotsVertical, mdiStarCircleOutline  } from '@mdi/js';
 import Icon from '@mdi/react';
 import { fetchAllProducts, addProduct, deleteProduct, updateProduct, featureProduct } from "../../firebaseFunctions/productFunctions";
 import { FileUploader } from "../../extensions/FileUploader";
-import productCategoriesSlice, { fetchProductCategoryStart, fetchProductCategorySuccess } from "../../redux/productCategoriesSlice";
+import { fetchProductCategoryStart, fetchProductCategorySuccess } from "../../redux/productCategoriesSlice";
 import { IProductCategory } from "../../types/IProductCategory";
 import { fetchAllProductCategories } from "../../firebaseFunctions/productCategoryFunctions";
 

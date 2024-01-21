@@ -6,7 +6,7 @@ import { mdiCart, mdiTrashCanOutline, mdiArrowRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import {removeItem} from '../redux/cartSlice';
 import {setSnack} from '../redux/snackSlice';
-import {cancelUrl,devPayFastUrl,livePayFastUrl,merchantId,merchantKey,paymentId,paymentMethod,returnUrl} from '../config.js';
+import {cancelUrl,livePayFastUrl,merchantId,merchantKey,paymentMethod,returnUrl} from '../config.js';
 
 
 const Cart = () => {

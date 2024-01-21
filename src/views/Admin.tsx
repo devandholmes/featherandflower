@@ -1,8 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchProductsStart, fetchProductsSuccess, fetchProductsFailure } from '../redux/productSlice';
-import { db } from '../firebase';
-import { Box, Card, CardContent, CardHeader, Tab, Tabs } from '@mui/material';
+import React, {useState } from 'react';
+import { Box,  Tab, Tabs } from '@mui/material';
 import ManageProducts from '../components/Admin/ManageProducts';
 import ManageProductCategory from '../components/Admin/ManageProductCategory';
 import ManageDiscountCodes from '../components/Admin/ManageDiscountCodes';

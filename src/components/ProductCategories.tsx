@@ -1,7 +1,6 @@
 import React from 'react';
 import FlipCard from './FlipCard';
-import { IProduct } from '../types/IProduct';
-import { Box, Card, CardContent, CardHeader, Grid, Stack, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 import { IProductCategory } from '../types/IProductCategory';
 
 interface ProductCategoriesProps {

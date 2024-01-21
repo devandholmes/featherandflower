@@ -4,10 +4,10 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-import { mdiCart, mdiThemeLightDark } from '@mdi/js';
+import { mdiThemeLightDark } from '@mdi/js';
 import Avatar from '@mui/material/Avatar';
 import AvatarImage from "../assets/FeatherAndFlower.png";
-import { Tooltip, Menu, MenuItem, Button } from '@mui/material';
+import { Tooltip} from '@mui/material';
 import Icon from '@mdi/react';
 import { useSelector } from 'react-redux';
 import Cart from './Cart';
@@ -17,20 +17,12 @@ interface CustomAppBarProps {
     darkToggle: () => void;
 }
 
-const CustomAppBar: React.FC<CustomAppBarProps> = ({ dark, darkToggle }) => {
+const CustomAppBar: React.FC<CustomAppBarProps> = ({ darkToggle }) => {
 
     const logoDimensions = 150;
     const [clickCount, setClickCount] = React.useState(0);
     const clickTimer = React.useRef<ReturnType<typeof setTimeout> | null>(null);
-    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
-    const handleCartClick = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorEl(event.currentTarget);
-    };
-
-    const handleMenuClose = () => {
-        setAnchorEl(null);
-    };
     const cartItems = useSelector((state: any) => state.cart.items);
     console.log(cartItems);
 

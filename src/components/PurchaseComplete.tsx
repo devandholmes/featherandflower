@@ -8,12 +8,9 @@ import {
     Typography,
     Grid,
     Container,
-    CardHeader,
-    CardActions,
     Button
 } from '@mui/material';
 import { IProduct } from "../types/IProduct";
-import firebase from "firebase";
 import { db } from "../firebase";
 
 const PurchaseComplete = () => {
